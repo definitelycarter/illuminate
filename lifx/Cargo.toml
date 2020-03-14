@@ -1,0 +1,26 @@
+[package]
+name = "lifx"
+version = "0.1.0"
+authors = ["definitelycarter <definitelycarter@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.26"
+bytes = "0.5.4"
+"log" = "0.4"
+num_enum = "0.4.2"
+
+[dependencies.tokio]
+version = "0.2.11"
+features = [
+  "dns",
+  "macros",
+  "sync",
+  "time",
+  "udp",
+]
+
+[dev-dependencies]
+simple_logger = "1.5.0"

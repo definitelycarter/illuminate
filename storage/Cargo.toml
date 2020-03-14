@@ -1,0 +1,20 @@
+[package]
+name = "storage"
+version = "0.1.0"
+authors = ["definitelycarter <definitelycarter@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.26"
+diesel = { version = "1.4.0", features = ["sqlite"] }
+diesel_migrations = { version = "1.4.0", features = ["sqlite"] }
+uuid = { version = "0.7", features = ["serde", "v4"] }
+
+[dependencies.tokio]
+version = "0.2.11"
+features = [
+  "blocking",
+  "rt-core"
+]
